@@ -1,0 +1,93 @@
+html {
+  scroll-behavior: smooth;
+}
+html,
+body {
+  font-family: $font-family;
+  font-weight: 700;
+  background-color: $dark;
+  color: $light;
+}
+
+.container {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 15px;
+  @include large {
+    max-width: 860px;
+  }
+  @include tablet {
+    max-width: 768px;
+  }
+  @include mobile {
+    max-width: 320px;
+  }
+}
+.container-fluid {
+  max-width: 100%;
+  margin-left: 150px;
+  padding-left: 15px;
+  @include large {
+    margin-left: 85px;
+    padding-left: 0;
+  }
+  @include mobile {
+    margin-left: 0;
+    padding: 0 15px;
+  }
+}
+
+.title {
+  margin-bottom: 100px;
+  font-weight: 300;
+  font-size: 48px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  text-align: center;
+  span {
+    color: $gold;
+  }
+  @include large {
+    margin-bottom: 50px;
+    font-size: 38px;
+  }
+  @include tablet {
+    font-size: 32px;
+  }
+	@include mobile {
+			font-size: 28px;
+	}
+}
+
+p + p {
+  margin-top: 0.8em;
+}
+
+.none {
+  display: none !important;
+}
+
+.visible-desktop {
+  @include tablet {
+    display: none;
+  }
+}
+
+.visually-hidden {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+.no-scroll {
+  overflow-y: hidden;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}

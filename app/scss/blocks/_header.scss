@@ -1,0 +1,98 @@
+.header {
+  margin-bottom: 150px;
+  padding: 50px 0 210px;
+  background-color: $dark;
+  background-image: $gradient-bg, url("./../images/header/header-bg.jpg");
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  @include large {
+    margin-bottom: 70px;
+    padding: 50px 0 52px;
+    @include tablet {
+      margin-bottom: 50px;
+    }
+    @include mobile {
+      padding: 30px 0 52px;
+      margin-bottom: 15;
+    }
+  }
+  @include mediaBG {
+    background-image: $gradient-bg, url("./../images/header/header-bg@2x.jpg");
+  }
+
+  &__nav {
+    margin-bottom: 190px;
+    @include large {
+      margin-bottom: 50px;
+    }
+    @include mobile {
+      margin-bottom: 15px;
+      display: none;
+    }
+  }
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    column-gap: 125px;
+    @include large {
+      column-gap: 70px;
+    }
+    @include tablet {
+    }
+  }
+  &__content {
+    position: relative;
+    max-width: 540px;
+    @include large {
+      max-width: 420px;
+    }
+  }
+
+  &__title {
+    margin-bottom: 50px;
+    font-size: 64px;
+    letter-spacing: 0.001em;
+    text-transform: uppercase;
+    @include large {
+      margin-bottom: 30px;
+      font-size: 48px;
+    }
+    @include mobile {
+      font-size: 30px;
+      margin-bottom: 15px;
+    }
+  }
+  &__subtitle {
+    margin-bottom: 49px;
+    font-family: $second-family;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.5;
+    @include large {
+      margin-bottom: 30px;
+    }
+    @include mobile {
+      font-size: 12px;
+      line-height: 1.2;
+    }
+  }
+
+  &__slider {
+    display: flex;
+    flex-direction: column;
+    row-gap: 35px;
+    @include tablet {
+      display: none;
+    }
+  }
+  &__controls {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 370px;
+    @include large {
+      width: 260px;
+    }
+  }
+}

@@ -1,0 +1,17 @@
+.social {
+  &__link {
+    transition: color 0.2s ease-in;
+
+    svg {
+      fill: currentColor;
+    }
+    &:hover,
+    &:focus {
+      color: $gold;
+    }
+
+    &:active {
+      color: $gold;
+    }
+  }
+}

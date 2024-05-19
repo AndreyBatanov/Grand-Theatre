@@ -1,0 +1,19 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,regular,500,600,700,800");
+
+@font-face {
+  font-family: "Open Sans Condensed";
+  src: url("../../fonts/OpenSansCondensedBold.woff2") format("woff2"),
+    url("../../fonts/OpenSansCondensedBold.woff") format("woff");
+  font-display: swap;
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Open Sans Condensed";
+  src: url("../../fonts/OpenSansCondensedLight.woff2") format("woff2"),
+    url("../../fonts/OpenSansCondensedLight.woff") format("woff");
+  font-display: swap;
+  font-weight: 300;
+  font-style: normal;
+}

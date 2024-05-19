@@ -1,0 +1,74 @@
+.form {
+  &__wrapper {
+    margin-bottom: 40px;
+    display: grid;
+    grid-template-columns: 25% 25% 40%;
+    gap: 30px;
+    @include tablet {
+      grid-template-columns: 25% 25% 42%;
+    }
+    @include mobile {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  &__colow {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+  input {
+    padding: 0 15px;
+    border: 1px solid #616161;
+    height: 35px;
+    background-color: #444;
+
+    color: $light;
+    &::placeholder {
+      font-family: $second-family;
+      font-weight: 600;
+      font-size: 12px;
+      line-height: 1.5;
+    }
+  }
+  textarea {
+    padding: 5px 15px;
+    resize: none;
+    border: 1px solid #616161;
+    height: 100px;
+    background-color: #444;
+    color: $light;
+    &::placeholder {
+      font-family: $second-family;
+      font-weight: 600;
+      font-size: 12px;
+      line-height: 1.5;
+    }
+  }
+
+  &__row {
+    display: flex;
+    justify-content: space-between;
+    gap: 100px;
+    @include large {
+      gap: 50px;
+    }
+    @include mobile {
+      flex-direction: column;
+      gap: 30px;
+    }
+  }
+  &__confid {
+    width: 390px;
+    font-family: $second-family;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.5;
+    color: #989898;
+  }
+  @include mobile {
+    text-align: center;
+  }
+  &__button {
+    margin: 0 auto;
+  }
+}

@@ -1,0 +1,44 @@
+.btn {
+  padding: 0 47px;
+  min-height: 48px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid $gold;
+  background-color: $gold;
+
+  font-size: 18px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  text-align: center;
+  transition: color 0.2s ease-in, background-color 0.2s ease-in,
+    border 0.2s ease-in;
+  @include large {
+    font-size: 16px;
+  }
+  @include mobile {
+    font-size: 14px;
+    padding: 0 40px;
+    min-height: 40px;
+  }
+
+  &:hover,
+  &:focus {
+    border: 1px solid $grey;
+    background-color: transparent;
+    color: $grey;
+  }
+  &:active {
+    border: 1px solid $gold;
+    background-color: $gold;
+    color: $light;
+  }
+  &--form {
+    padding: 0 50px;
+    @include large {
+      font-size: 16px;
+      padding: 0 40px;
+      min-height: 40px;
+    }
+  }
+}

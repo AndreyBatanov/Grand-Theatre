@@ -1,0 +1,131 @@
+.drag-slider {
+  &__items {
+    display: flex;
+    justify-content: center;
+  }
+  &__item {
+    overflow: hidden;
+    position: relative;
+    img {
+      display: block;
+      position: relative;
+    }
+    a.info {
+      position: absolute;
+      top: 35%;
+      left: 30%;
+      display: inline-flex;
+      text-decoration: none;
+      width: 0px;
+      height: 0px;
+      background-color: $gold;
+      background-image: url("./../images/icons/search.svg");
+      background-position: center center; /* x y */
+      background-size: auto;
+      background-repeat: no-repeat;
+
+      justify-content: center;
+      align-items: center;
+      border-radius: 50%;
+      box-shadow: 0 0 1px $gold;
+      opacity: 0;
+      &:hover {
+        box-shadow: 0 0 10px $gold;
+      }
+    }
+    .top {
+      font-size: 24px;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      position: absolute;
+      top: 40px;
+      left: 40px;
+    }
+    .bot {
+      width: 25px;
+      height: 129px;
+      position: absolute;
+      bottom: 40px;
+      left: 40px;
+      font-size: 14px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      span {
+        display: flex;
+        transform: rotate(-90deg) translate(-50%, -350%);
+        align-items: center;
+        justify-content: flex-start;
+        width: 135px;
+        opacity: 1;
+      }
+    }
+  }
+  &__item .mask {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+    background-color: transparent;
+    transition: all 0.8s ease-in-out;
+    opacity: 1;
+  }
+  &__item-first {
+    .mask {
+      opacity: 1;
+      background-color: rgba(33, 33, 33, 0.65);
+      transition: all 0.8s ease-in-out;
+    }
+    img:not(a.info img) {
+      transition: all 0.2s linear;
+      width: 100%;
+      height: 100%;
+    }
+    .top,
+    .bot {
+      opacity: 1;
+      transition: all 0.2s linear;
+    }
+    a {
+      opacity: 1;
+      transition: all 0.2s ease-in-out;
+    }
+  }
+  &__item-first:hover {
+    img {
+      transform: scale(1.05);
+    }
+    .mask {
+      background-color: transparent;
+      opacity: 1;
+    }
+    a.info {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      display: inline-flex;
+      text-decoration: none;
+      width: 80px;
+      height: 80px;
+      background-color: $gold;
+      justify-content: center;
+      align-items: center;
+      border-radius: 50%;
+      box-shadow: 0 0 1px $gold;
+      opacity: 1;
+      transform: translate(-50%, -50%);
+      &:hover {
+        box-shadow: 0 0 10px #c49228;
+      }
+    }
+    .top,
+    .bot {
+      opacity: 0;
+      transition-delay: 0.2s;
+    }
+    a.info {
+      transition-delay: 0.3s;
+    }
+  }
+}

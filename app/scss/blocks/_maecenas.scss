@@ -1,0 +1,30 @@
+.maecenas {
+  margin-bottom: 80px;
+  @include large {
+    margin-bottom: 50px;
+  }
+  @include mobile {
+    display: none;
+  }
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    @include large {
+      column-gap: 20px;
+    }
+    @include tablet {
+      flex-direction: column;
+      row-gap: 40px;
+    }
+  }
+  &__contacts {
+    @include tablet {
+      order: 0;
+    }
+  }
+  &__forms {
+    @include tablet {
+      order: -1;
+    }
+  }
+}

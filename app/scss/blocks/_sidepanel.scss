@@ -1,0 +1,55 @@
+.sidepanel {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 3;
+
+  height: 100vh;
+  width: 150px;
+  background-color: rgba(51, 51, 51, 0.75);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: $grey;
+  @include large {
+    max-width: 85px;
+  }
+  @include mobile {
+    display: none;
+  }
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+  &__text {
+    width: 25px;
+    height: 242px;
+
+    font-size: 16px;
+    letter-spacing: 0.005em;
+    line-height: 1;
+    text-transform: uppercase;
+    a {
+      transform: rotate(-90deg) translate(-45%, -672%);
+      display: block;
+      width: 242px;
+    }
+  }
+
+  &__divider {
+    width: 3px;
+    height: 80px;
+    background-color: $grey;
+  }
+  &__social {
+    width: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 30px;
+  }
+}

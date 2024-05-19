@@ -1,0 +1,25 @@
+.contact {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  font-weight: 700;
+  font-size: 16px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  @include large {
+    font-size: 14px;
+    letter-spacing: 0.03em;
+  }
+  @include tablet {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  &__colow {
+    display: flex;
+    flex-direction: column;
+    row-gap: 25px;
+    @include tablet {
+      row-gap: 10px;
+    }
+  }
+}

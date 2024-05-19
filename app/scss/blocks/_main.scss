@@ -1,0 +1,11 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  row-gap: 150px;
+  @include large {
+    row-gap: 70px;
+  }
+  @include mobile {
+    row-gap: 40px;
+  }
+}

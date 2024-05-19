@@ -1,0 +1,76 @@
+.slider {
+  max-width: 370px;
+  &__container {
+    position: relative;
+  }
+  &__item {
+    width: 350px;
+    height: 490px;
+    object-fit: cover;
+    overflow: hidden;
+    @include large {
+      width: 250px;
+      height: 390px;
+    }
+  }
+  &__item-clon {
+    position: absolute;
+    width: 350px;
+    height: 490px;
+    top: 20px;
+    left: 20px;
+    overflow: hidden;
+    z-index: -1;
+    @include large {
+      top: 10px;
+      left: 10px;
+      width: 250px;
+      height: 390px;
+    }
+    &::before {
+      position: absolute;
+      display: block;
+      content: "";
+      top: 0px;
+      left: 0px;
+      width: 350px;
+      height: 490px;
+      background-color: rgba(209, 169, 84, 0.85);
+    }
+    @include large {
+      width: 250px;
+      height: 390px;
+    }
+  }
+  &__img {
+    width: 350px;
+    height: 490px;
+    object-fit: cover;
+  }
+}
+
+.next,
+.prev {
+  display: flex;
+  align-items: center;
+  column-gap: 25px;
+  font-weight: 700;
+  font-size: 18px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  transition: color 0.2s ease-in;
+  @include large {
+    font-size: 14px;
+  }
+
+  svg {
+    fill: currentColor;
+  }
+  &:hover,
+  &:focus {
+    color: $grey;
+  }
+  &:active {
+    color: $gold;
+  }
+}
